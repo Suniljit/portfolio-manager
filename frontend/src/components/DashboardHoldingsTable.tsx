@@ -33,7 +33,10 @@ export function DashboardHoldingsTable({ holdings }: DashboardHoldingsTableProps
           {holdings.map((h) => {
             const plClass = h.unrealized_pl >= 0 ? "positive" : "negative";
             return (
-              <TableRow key={h.clientKey} className="border-b-[var(--row-separator)] hover:bg-transparent">
+              <TableRow
+                key={h.clientKey}
+                className="border-b-[var(--row-separator)] hover:bg-transparent"
+              >
                 <TableCell className="py-2 pr-1 pl-5">
                   <span className="flex items-center gap-2">
                     <span className="font-semibold text-[var(--color-gold)]">{h.ticker}</span>

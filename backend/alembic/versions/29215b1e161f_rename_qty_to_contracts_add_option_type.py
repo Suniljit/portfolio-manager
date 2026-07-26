@@ -22,9 +22,7 @@ def upgrade() -> None:
     """Upgrade schema."""
     with op.batch_alter_table("option_trades") as batch_op:
         batch_op.alter_column("qty", new_column_name="contracts")
-        batch_op.add_column(
-            sa.Column("option_type", sa.Text(), nullable=False, server_default="")
-        )
+        batch_op.add_column(sa.Column("option_type", sa.Text(), nullable=False, server_default=""))
 
 
 def downgrade() -> None:
