@@ -44,9 +44,7 @@ async def _to_out(t: OptionTrade) -> OptionTradeOut:
     except ValueError:
         remaining_dte = 0
 
-    current_price = await _cached_option_price(
-        t.ticker, t.expiration_date, t.strike, t.option_type
-    )
+    current_price = await _cached_option_price(t.ticker, t.expiration_date, t.strike, t.option_type)
     current_price = current_price if current_price is not None else 0.0
     if t.direction == "short":
         pl_open = (t.entry_price - current_price) * 100 * t.contracts
