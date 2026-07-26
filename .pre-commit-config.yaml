@@ -1,0 +1,48 @@
+default_install_hook_types: [pre-commit, pre-push]
+
+repos:
+  - repo: https://github.com/astral-sh/ruff-pre-commit
+    rev: v0.16.0
+    hooks:
+      - id: ruff
+        name: ruff check
+      - id: ruff-format
+        name: ruff format --check
+        args: [--check]
+
+  - repo: local
+    hooks:
+      - id: oxlint
+        name: oxlint
+        entry: frontend/node_modules/.bin/oxlint
+        language: system
+        files: ^frontend/.*\.(ts|tsx)$
+        pass_filenames: true
+
+      - id: prettier-check
+        name: prettier --check
+        entry: frontend/node_modules/.bin/prettier --check
+        language: system
+        files: ^frontend/.*\.(ts|tsx|css|json|md)$
+        pass_filenames: true
+
+      - id: ty-check
+        name: ty check
+        entry: uv run ty check
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
+
+      - id: pytest
+        name: pytest
+        entry: uv run pytest
+        language: system
+        pass_filenames: false
+        stages: [pre-push]
+
+      - id: vitest
+        name: vitest
+        entry: npm --prefix frontend run test
+        language: system
+        pass_filenames: false
+        stages: [pre-push]

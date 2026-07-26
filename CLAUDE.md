@@ -19,6 +19,7 @@ npm --prefix frontend run format                         # frontend format (pret
 npm --prefix frontend run format:check                    # frontend format check (prettier --check)
 npm run electron:dev                                    # macOS Electron app in dev mode (spawns backend + frontend dev servers)
 npm run electron:build                                   # build a distributable .dmg (frontend build + backend freeze + package)
+uv run pre-commit install                              # one-time per clone: registers pre-commit (lint/format) and pre-push (typecheck/tests) git hooks
 ```
 
 ## Architecture
