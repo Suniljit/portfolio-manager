@@ -6,9 +6,11 @@ repos:
     hooks:
       - id: ruff
         name: ruff check
+        stages: [pre-commit]
       - id: ruff-format
         name: ruff format --check
         args: [--check]
+        stages: [pre-commit]
 
   - repo: local
     hooks:
@@ -18,6 +20,7 @@ repos:
         language: system
         files: ^frontend/.*\.(ts|tsx)$
         pass_filenames: true
+        stages: [pre-commit]
 
       - id: prettier-check
         name: prettier --check
@@ -25,6 +28,7 @@ repos:
         language: system
         files: ^frontend/.*\.(ts|tsx|css|json|md)$
         pass_filenames: true
+        stages: [pre-commit]
 
       - id: ty-check
         name: ty check
