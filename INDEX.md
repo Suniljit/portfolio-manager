@@ -91,3 +91,9 @@ Navigation guide for all documentation in this repository. Intended for both hum
 | [`docs/adr/009-electron-desktop-packaging.md`](docs/adr/009-electron-desktop-packaging.md) | Electron over Tauri or native Swift, for a packaged macOS app |
 | [`docs/adr/010-options-pricing-source.md`](docs/adr/010-options-pricing-source.md) | yfinance `option_chain()` for options mark price — **superseded by ADR 011** |
 | [`docs/adr/011-ibkr-options-pricing.md`](docs/adr/011-ibkr-options-pricing.md) | IBKR via `ib_async` over yfinance, for live bid/ask options pricing |
+
+## Design
+
+| Document | Status | Depends on | Description |
+|---|---|---|---|
+| [PRD](docs/design/prd.md) | draft | — | Problem, persona, scope, user stories, success metrics |
