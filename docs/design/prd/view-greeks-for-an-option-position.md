@@ -2,6 +2,8 @@
 
 **Feature:** Options greeks
 
+**As a** retail investor, **I want** to see delta, theta, gamma, and vega for an open option position, **so that** I can assess its risk
+
 **Given** an open option position
 **When** I view it
 **Then** I see its current delta, theta, gamma, and vega

@@ -2,6 +2,8 @@
 
 **Feature:** Stock holdings CRUD
 
+**As a** retail investor, **I want** to add, edit, and delete stock holdings, **so that** my portfolio reflects my actual positions
+
 **Given** I want to track a new stock position
 **When** I enter a ticker, number of shares, average price, and fees, and save
 **Then** the holding is added to my portfolio and appears in the holdings list

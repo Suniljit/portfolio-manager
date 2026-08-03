@@ -2,6 +2,8 @@
 
 **Feature:** Stock realized P&L / transaction history
 
+**As a** retail investor, **I want** realized P&L computed automatically when I close a holding, **so that** I have an accurate closed-position history without manual math
+
 **Given** an open stock holding
 **When** I record a sale (full or partial) with a sale price and date
 **Then** realized P&L is computed for the sold portion and the transaction is added to my closed-position history
