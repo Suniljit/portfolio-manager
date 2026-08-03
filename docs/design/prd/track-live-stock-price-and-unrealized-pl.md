@@ -2,6 +2,8 @@
 
 **Feature:** Live stock pricing & unrealized P&L
 
+**As a** retail investor, **I want** my holdings' prices and P&L to update automatically, **so that** I always see current values without manual entry
+
 **Given** I have one or more open stock holdings
 **When** the app polls for current prices
 **Then** each holding's current price, total cost, market value, and unrealized P&L are recalculated and displayed without any manual entry

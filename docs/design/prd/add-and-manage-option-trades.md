@@ -2,6 +2,8 @@
 
 **Feature:** Option trades CRUD
 
+**As a** retail investor, **I want** to add, edit, and delete option trades, **so that** my open option positions are accurately tracked
+
 **Given** I want to track a new option position
 **When** I enter ticker, strategy, option type (call/put), direction (long/short), strike, expiration date, contracts, entry price, and fees, and save
 **Then** the trade is added and appears in my open option positions

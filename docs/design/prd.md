@@ -2,7 +2,7 @@
 doc_type: prd
 status: draft
 depends_on: []
-last_updated: 2026-08-02
+last_updated: 2026-08-03
 ---
 
 # Folio — PRD
